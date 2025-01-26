@@ -8,18 +8,4 @@ module.exports = {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
-  theme: {
-    colors,
-    extend: {},
-  },
-  variants: {
-    extend: {
-      backgroundColor: ['dark'],
-      textColor: ['dark'],
-    },
-  },
-  plugins: [
-   	require('tailwindcss-dark-mode')()
-  ],
 }

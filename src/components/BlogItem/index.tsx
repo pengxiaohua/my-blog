@@ -1,7 +1,7 @@
-import React, { FC } from "react"
+import { FC } from "react";
 
-import { customHistory } from "../../utils"
-import './index.scss'
+import { customHistory } from "../../utils";
+import "./index.scss";
 
 interface IBlog {
   id: number;
@@ -14,21 +14,15 @@ interface IBlog {
 }
 
 interface IProps {
-  blog: IBlog
+  blog: IBlog;
 }
 
-const defaultProps = {}
-
-type DefaultProps = Readonly<typeof defaultProps>
-
-type Props = IProps & Partial<DefaultProps>
-
-const BlogItem: FC<Props> = (props) => {
-  const { blog } = props
+const BlogItem: FC<IProps> = (props) => {
+  const { blog } = props;
 
   const viewBlogDetail = (id) => {
-    customHistory.push(`/blog-detail/${id}`)
-  }
+    customHistory.push(`/blog-detail/${id}`);
+  };
 
   return (
     <div
@@ -49,9 +43,7 @@ const BlogItem: FC<Props> = (props) => {
         <div className="blog-item__tags dark:text-white">{blog.tags}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-BlogItem.defaultProps = defaultProps
-
-export default BlogItem
+export default BlogItem;

@@ -1,16 +1,8 @@
-import React, { FC } from "react"
+import { FC } from "react";
 
-import './index.scss'
+import "./index.scss";
 
-interface IProps { }
-
-const defaultProps = {}
-
-type DefaultProps = Readonly<typeof defaultProps>
-
-type Props = IProps & Partial<DefaultProps>
-
-const Aside: FC<Props> = (props) => {
+const Aside: FC = () => {
   return (
     <div className="aside-part border border-slate-900 dark:border-white">
       博客日历
@@ -19,9 +11,7 @@ const Aside: FC<Props> = (props) => {
       <br />
       数据统计
     </div>
-  )
-}
+  );
+};
 
-Aside.defaultProps = defaultProps
-
-export default Aside
+export default Aside;

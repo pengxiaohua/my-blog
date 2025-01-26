@@ -1,16 +1,8 @@
-import React, { FC } from "react"
+import { FC } from "react";
 
-import ContentWrap from "../../components/ContentWrap"
+import ContentWrap from "../../components/ContentWrap";
 
-interface IProps { }
-
-const defaultProps = {}
-
-type DefaultProps = Readonly<typeof defaultProps>
-
-type Props = IProps & Partial<DefaultProps>
-
-const BlogDetail: FC<Props> = (props) => {
+const BlogDetail: FC = () => {
   return (
     <div className="blog-detail">
       <ContentWrap>
@@ -18,9 +10,7 @@ const BlogDetail: FC<Props> = (props) => {
         <div className="blog-detail__content">这是内容区域</div>
       </ContentWrap>
     </div>
-  )
-}
+  );
+};
 
-BlogDetail.defaultProps = defaultProps
-
-export default BlogDetail
+export default BlogDetail;

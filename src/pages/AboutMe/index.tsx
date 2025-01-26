@@ -1,17 +1,9 @@
-import React, { FC } from "react"
+import { FC } from "react";
 
-import ContentWrap from "../../components/ContentWrap"
-import './index.scss'
+import ContentWrap from "../../components/ContentWrap";
+import "./index.scss";
 
-interface IProps { }
-
-const defaultProps = {}
-
-type DefaultProps = Readonly<typeof defaultProps>
-
-type Props = IProps & Partial<DefaultProps>
-
-const AboutMe: FC<Props> = (props) => {
+const AboutMe: FC = () => {
   return (
     <div className="about-me">
       <ContentWrap>
@@ -23,9 +15,7 @@ const AboutMe: FC<Props> = (props) => {
         <h3>武汉科技大学-信息管理与信息系统</h3>
       </ContentWrap>
     </div>
-  )
-}
+  );
+};
 
-AboutMe.defaultProps = defaultProps
-
-export default AboutMe
+export default AboutMe;

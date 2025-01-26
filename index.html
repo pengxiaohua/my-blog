@@ -1,65 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>xiaohua.run!</title>
-  <script>
-    // try {
-    //   if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    //     document.documentElement.classList.add('dark')
-    //   } else {
-    //     document.documentElement.classList.remove('dark')
-    //   }
-    // } catch (_) { }
-    (function () {
-      function setTheme(newTheme) {
-        window.__theme = newTheme;
-        if (newTheme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else if (newTheme === 'light') {
-          document.documentElement.classList.remove('dark');
-        }
-      }
-
-      var preferredTheme;
-
-      try {
-        preferredTheme = localStorage.getItem('theme');
-      } catch (err) { }
-      window.__setPreferredTheme = function (newTheme) {
-        console.log({newTheme});
-        preferredTheme = newTheme;
-        setTheme(newTheme);
-        try {
-          localStorage.setItem('theme', newTheme);
-        } catch (err) { }
-      };
-
-      var initialTheme = preferredTheme;
-
-      var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-      if (!initialTheme) {
-        initialTheme = darkQuery.matches ? 'dark' : 'light';
-      }
-
-      setTheme(initialTheme);
-
-      darkQuery.addEventListener('change', function (e) {
-        if (!preferredTheme) {
-          setTheme(e.matches ? 'dark' : 'light');
-        }
-      });
-
-    })()
-  </script>
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
-  <div id="root" class=""></div>
+  <div id="root"></div>
   <script type="module" src="/src/index.tsx"></script>
 </body>
 
