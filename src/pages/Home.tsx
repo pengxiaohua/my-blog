@@ -6,7 +6,7 @@ import BlogItem from "../components/BlogItem";
 
 const HomePage: FC = () => {
   return (
-    <div className="w-[100vw] flex p-4">
+    <div className="w-[100vw] flex">
       <article className="flex-1">
         {blogList.map((blog) => (
           <BlogItem blog={blog} key={blog.id} />

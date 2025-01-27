@@ -7,8 +7,8 @@ import { BlogType } from "../types/enums";
 
 const Thinking: FC = () => {
   return (
-    <div className="w-[100vw]">
-      <article className="home__blog-list">
+    <div className="w-[100vw] flex">
+      <article className="flex-1">
         {blogList
           .filter((item) => item.type === BlogType.Thinking)
           .map((blog) => (

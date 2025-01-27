@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Aside: FC = () => {
   return (
-    <div className="p-4 box-border rounded-lg ml-5 w-[300px] border border-slate-900 dark:border-white">
+    <div className="p-4 box-border rounded-lg ml-4 w-[300px] border border-slate-900 dark:border-white hidden lg:block">
       博客日历
       <br />
       词云分类
