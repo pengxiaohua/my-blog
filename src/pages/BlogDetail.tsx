@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import ContentWrap from "../../components/ContentWrap";
+import ContentWrap from "../components/ContentWrap";
 
 const BlogDetail: FC = () => {
   return (

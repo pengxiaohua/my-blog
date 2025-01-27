@@ -1,7 +1,5 @@
 import { FC } from "react";
 
-import Header from "../Header";
-import Footer from "../Footer";
 import "./index.scss";
 
 interface IProps {
@@ -14,14 +12,12 @@ const ContentWrap: FC<IProps> = (props) => {
 
   return (
     <div className="content-wrap">
-      <Header />
       <div
-        className="content-wrap__content"
+        className="flex justify-center"
         style={{ display: flex ? "flex" : "block" }}
       >
         {children}
       </div>
-      <Footer />
     </div>
   );
 };

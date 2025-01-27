@@ -1,15 +1,14 @@
 import { FC } from "react";
 
-import ContentWrap from "../../components/ContentWrap";
-import { blogList } from "../../mock/blog-list";
-import BlogItem from "../../components/BlogItem";
-import Aside from "../../components/Aside";
-import { BlogType } from "../../types/enums";
-import "./index.scss";
+import ContentWrap from "../components/ContentWrap";
+import { blogList } from "../mock/blog-list";
+import BlogItem from "../components/BlogItem";
+import Aside from "../components/Aside";
+import { BlogType } from "../types/enums";
 
 const Thinking: FC = () => {
   return (
-    <div className="thinking-page">
+    <div className="w-[100vw]">
       <ContentWrap flex>
         <article className="home__blog-list">
           {blogList

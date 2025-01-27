@@ -1,11 +1,10 @@
 import { FC } from "react";
 
-import ContentWrap from "../../components/ContentWrap";
-import "./index.scss";
+import ContentWrap from "../components/ContentWrap";
 
 const AboutMe: FC = () => {
   return (
-    <div className="about-me">
+    <div className="w-[100vw]">
       <ContentWrap>
         <h3>小米(武汉)</h3>
         <h3>高德地图</h3>

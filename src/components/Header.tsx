@@ -1,15 +1,12 @@
 import { FC, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
-import Navigation from "../Navigation";
-import githubLightIcon from "../../assets/github-light-icon.png";
-import githubDarkIcon from "../../assets/github-dark-icon.png";
-import wechatLightIcon from "../../assets/wechat-light-icon.png";
-import wechatDarkIcon from "../../assets/wechat-dark-icon.png";
-import darkModeIcon from "../../assets/dark-mode-icon.png";
-import lightModeIcon from "../../assets/light-mode-icon.png";
-import wechatQcCode from "../../assets/wechat-qc-code.jpg";
-import "./index.scss";
+import SwitchMode from "./SwitchMode";
+import Navigation from "./Navigation";
+import githubLightIcon from "@/assets/github-light-icon.png";
+import githubDarkIcon from "@/assets/github-dark-icon.png";
+import wechatLightIcon from "@/assets/wechat-light-icon.png";
+import wechatDarkIcon from "@/assets/wechat-dark-icon.png";
+import wechatQcCode from "@/assets/wechat-qc-code.jpg";
 
 const Header: FC = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -65,30 +62,22 @@ const Header: FC = () => {
   };
 
   return (
-    <div className="header bg-white dark:bg-slate-900">
-      <div className="header__content">
-        <Link
-          to="/"
-          className="header__logo font-bold dark:text-white text-grey-800"
-        >
+    <div className="custom-shadow bg-white h-[70px] dark:bg-slate-900 sticky top-0 z-2">
+      <div className="max-w-5xl m-auto h-18 flex justify-between items-center">
+        <div className="text-[#333] text-xl lg:text-3xl sm:text-2xl dark:text-white font-bold text-grey-800">
           xiaohua.run!
-        </Link>
+        </div>
         <Navigation />
-        <div className="header__social-links">
+        <div className="flex items-center relative">
           <img
-            className="header__social-links__qc-code"
+            className="absolute top-[30px]"
             style={{ display: showQcCode ? "block" : "none" }}
             src={wechatQcCode}
             alt="wechat-qc-code"
           />
+          <SwitchMode onChange={toggleDarkMode} initialChecked={isDark} />
           <div
-            className="header__mode cursor-pointer w-5"
-            onClick={toggleDarkMode}
-          >
-            <img src={isDark ? lightModeIcon : darkModeIcon} alt="mode" />
-          </div>
-          <div
-            className="header__wechat-link cursor-pointer"
+            className="w-[22px] h-[22px] cursor-pointer ml-[20px] mr-[20px]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -97,7 +86,7 @@ const Header: FC = () => {
           <a
             href="https://github.com/pengxiaohua"
             target="__blank"
-            className="header__github-link cursor-pointer"
+            className="w-[20px] h-[20px] cursor-pointer"
           >
             <img src={isDark ? githubDarkIcon : githubLightIcon} alt="github" />
           </a>

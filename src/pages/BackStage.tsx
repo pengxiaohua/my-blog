@@ -1,7 +1,5 @@
 import { FC } from "react";
-import ContentWrap from "../../components/ContentWrap";
-
-import "./index.scss";
+import ContentWrap from "../components/ContentWrap";
 
 const BackStage: FC = () => {
   return (
