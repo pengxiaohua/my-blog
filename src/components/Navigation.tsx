@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 import { IoClose, IoMenu } from "react-icons/io5";
 
@@ -7,6 +7,8 @@ import { navList } from "../utils/common";
 
 const Navigation: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // 控制导航栏是否展开
+
+  const location = useLocation();
 
   return (
     <nav className="relative">
@@ -16,7 +18,11 @@ const Navigation: FC = () => {
           <li className="cursor-pointer" key={nav.key}>
             <Link
               to={nav.route}
-              className="hover:text-sky-500 dark:hover:text-sky-400"
+              className={`cursor-pointer ${
+                location.pathname === nav.route
+                  ? "text-sky-500 dark:text-sky-400" // 高亮样式
+                  : "hover:text-sky-500 dark:hover:text-sky-400"
+              }`}
             >
               {nav.title}
             </Link>

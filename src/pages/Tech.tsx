@@ -7,7 +7,7 @@ import { BlogType } from "../types/enums";
 
 const Tech: FC = () => {
   return (
-    <div className="w-[100vw] m-auto flex">
+    <div className="w-[100%] m-auto flex">
       <article className="flex-1">
         {blogList
           .filter((item) => item.type === BlogType.Tech)

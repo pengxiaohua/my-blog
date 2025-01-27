@@ -7,7 +7,7 @@ import { BlogType } from "../types/enums";
 
 const Web3: FC = () => {
   return (
-    <div className="w-[100vw] flex">
+    <div className="w-[100%] flex">
       <article className="flex-1">
         {blogList
           .filter((item) => item.type === BlogType.Web3)

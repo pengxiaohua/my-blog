@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react";
+import { Link } from "react-router";
 
 import SwitchMode from "./SwitchMode";
 import Navigation from "./Navigation";
@@ -64,9 +65,12 @@ const Header: FC = () => {
   return (
     <div className="custom-shadow w-[100vw] bg-white h-[60px] dark:bg-slate-900 sticky top-0 z-2">
       <div className="max-w-5xl m-auto h-[60px] flex justify-between items-center px-4">
-        <div className="text-[#333] text-xl lg:text-3xl md:text-2xl sm:text-xl dark:text-white font-bold text-grey-800">
+        <Link
+          to="/"
+          className="text-[#333] text-xl lg:text-3xl md:text-2xl sm:text-xl dark:text-white font-bold text-grey-800"
+        >
           xiaohua.run!
-        </div>
+        </Link>
         <Navigation />
         <div className="flex items-center relative">
           <img

@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const AboutMe: FC = () => {
   return (
-    <div className="w-[100vw]">
+    <div className="w-[100%]">
       <h3>小米(武汉)</h3>
       <h3>高德地图</h3>
       <h3>小米(北京)</h3>
