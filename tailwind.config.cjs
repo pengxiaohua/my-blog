@@ -10,12 +10,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      // 'sm': '480px',
-      // 'md': '768px',
-      // 'lg': '1024px',
-      // 'xl': '1280px',
       'sm': '480px',
-      'lg': '768px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
     },
     extend: {
       fontSize: {

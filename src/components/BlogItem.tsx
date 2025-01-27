@@ -1,8 +1,6 @@
 import { FC } from "react";
 import { useNavigate } from "react-router";
 
-import "./index.scss";
-
 interface IBlog {
   id: number;
   title: string;
@@ -28,21 +26,23 @@ const BlogItem: FC<IProps> = (props) => {
 
   return (
     <div
-      className="blog-item border border-slate-900 dark:border-white"
+      className="cursor-pointer box-border p-[15px] text-black rounded-lg mb-4 border border-slate-900 dark:border-white"
       key={blog.id}
       onClick={() => viewBlogDetail(blog.id)}
     >
-      <div className="blog-item__title dark:text-white">{blog.title}</div>
-      <div className="blog-item__time-and-author dark:text-slate-400">
-        <div className="blog-item__time">{blog.createTime}</div>
-        <div className="blog-item__author">{blog.author}</div>
+      <div className="text-center text-base font-bold dark:text-white">
+        {blog.title}
       </div>
-      <div className="blog-item__content dark:text-white">{blog.content}</div>
-      <div className="blog-item__bottom-info">
+      <div className="flex justify-center items-center my-2  dark:text-slate-400">
+        <div className="mr-3">{blog.createTime}</div>
+        <div>{blog.author}</div>
+      </div>
+      <div className="break-all dark:text-white">{blog.content}</div>
+      <div className="flex justify-between items-center mt-4">
         <div className="blog-item__read-times dark:text-white">
           阅读次数：{blog.readTimes}
         </div>
-        <div className="blog-item__tags dark:text-white">{blog.tags}</div>
+        <div className="flex justify-end dark:text-white">{blog.tags}</div>
       </div>
     </div>
   );

@@ -62,9 +62,9 @@ const Header: FC = () => {
   };
 
   return (
-    <div className="custom-shadow bg-white h-[70px] dark:bg-slate-900 sticky top-0 z-2">
-      <div className="max-w-5xl m-auto h-18 flex justify-between items-center">
-        <div className="text-[#333] text-xl lg:text-3xl sm:text-2xl dark:text-white font-bold text-grey-800">
+    <div className="custom-shadow w-[100vw] bg-white h-[60px] dark:bg-slate-900 sticky top-0 z-2">
+      <div className="max-w-5xl m-auto h-[60px] flex justify-between items-center px-4">
+        <div className="text-[#333] text-xl lg:text-3xl md:text-2xl sm:text-xl dark:text-white font-bold text-grey-800">
           xiaohua.run!
         </div>
         <Navigation />
@@ -77,7 +77,7 @@ const Header: FC = () => {
           />
           <SwitchMode onChange={toggleDarkMode} initialChecked={isDark} />
           <div
-            className="w-[22px] h-[22px] cursor-pointer ml-[20px] mr-[20px]"
+            className="w-[22px] h-[22px] cursor-pointer ml-[10px] hidden md:block"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -86,7 +86,7 @@ const Header: FC = () => {
           <a
             href="https://github.com/pengxiaohua"
             target="__blank"
-            className="w-[20px] h-[20px] cursor-pointer"
+            className="w-[20px] h-[20px] ml-[10px] cursor-pointer"
           >
             <img src={isDark ? githubDarkIcon : githubLightIcon} alt="github" />
           </a>

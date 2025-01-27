@@ -1,12 +1,7 @@
 import { FC } from "react";
-import ContentWrap from "../components/ContentWrap";
 
 const BackStage: FC = () => {
-  return (
-    <div className="back-stage">
-      <ContentWrap>后台管理系统</ContentWrap>
-    </div>
-  );
+  return <div className="back-stage">后台管理系统</div>;
 };
 
 export default BackStage;

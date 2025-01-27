@@ -1,11 +1,9 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
-
-import "./index.scss";
+import { Link } from "react-router";
 
 const footer: FC = () => {
   return (
-    <div className="footer">
+    <div className="flex justify-center">
       <div className="footer__years">
         {`2022-${new Date().getFullYear()}`}
         <Link to="/back-stage" style={{ marginLeft: 10, fontSize: 14 }}>
