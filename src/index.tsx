@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <Route path="/essay-and-reading" element={<EssayAndReading />} />
       <Route path="/thinking" element={<Thinking />} />
       <Route path="/about-me" element={<AboutMe />} />
-      <Route path={`/blog-detail/:id`} element={<BlogDetail />} />
+      <Route path={`/blog/:id`} element={<BlogDetail />} />
       <Route path="/back-stage" element={<BackStage />} />
     </Routes>
     <Footer />

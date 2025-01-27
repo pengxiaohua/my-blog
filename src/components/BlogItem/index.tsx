@@ -1,6 +1,6 @@
 import { FC } from "react";
+import { useNavigate } from "react-router";
 
-import { customHistory } from "../../utils";
 import "./index.scss";
 
 interface IBlog {
@@ -20,8 +20,10 @@ interface IProps {
 const BlogItem: FC<IProps> = (props) => {
   const { blog } = props;
 
-  const viewBlogDetail = (id) => {
-    customHistory.push(`/blog-detail/${id}`);
+  const navigate = useNavigate();
+
+  const viewBlogDetail = (id: number) => {
+    navigate(`/blog/${id}`);
   };
 
   return (

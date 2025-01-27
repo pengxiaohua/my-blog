@@ -1,8 +1,11 @@
 import { FC } from "react";
-
+import { useParams } from "react-router";
 import ContentWrap from "../components/ContentWrap";
 
 const BlogDetail: FC = () => {
+  const { id } = useParams();
+  console.log({ id });
+
   return (
     <div className="blog-detail">
       <ContentWrap>
