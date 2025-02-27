@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-const BackStage: FC = () => {
+const Admin: FC = () => {
   return <div className="back-stage">后台管理系统</div>;
 };
 
-export default BackStage;
+export default Admin;
