@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useNavigate } from "react-router";
-import { IoEyeOutline } from "react-icons/io5";
-
+import { BiLike, BiSolidLike } from "react-icons/bi";
+import { LuEye, LuMessageSquareMore } from "react-icons/lu";
 
 interface IBlog {
   id: number;
@@ -9,7 +9,9 @@ interface IBlog {
   content: string;
   tags: string[];
   author: string;
-  readTimes?: number;
+  readCount: number;
+  likeCount: number;
+  commentCount: number;
   createTime: string;
 }
 
@@ -40,10 +42,19 @@ const BlogItem: FC<IProps> = (props) => {
         <div>{blog.author}</div>
       </div>
       <div className="break-all dark:text-white">{blog.content}</div>
-      <div className="flex justify-between items-center mt-4">
-        <div className="blog-item__read-times dark:text-white flex items-center text-sm">
-          <IoEyeOutline /> {blog.readTimes}
+      <div className="flex justify-between items-center mt-4 dark:text-white">
+        <div className="flex items-center gap-4">
+          <div className="blog-item__read-times flex items-center text-sm gap-1">
+            <LuEye /> {blog.readCount}
+          </div>
+          <div className="flex items-center gap-1">
+            <BiLike /> {blog.likeCount}
+          </div>
+          <div className="flex items-center gap-1">
+            <LuMessageSquareMore />  {blog.likeCount}
+          </div>
         </div>
+
         <div className="flex justify-end dark:text-white">
           {
             blog.tags.map((tag, index) => (
