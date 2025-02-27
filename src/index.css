@@ -60,7 +60,7 @@ button:focus-visible {
 }
 
 .custom-shadow {
-  @apply shadow-[0_1px_4px_rgb(0_21_41/_8%)] ;
+  @apply shadow-[0_1px_4px_rgb(0_21_41/_8%)];
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -75,3 +75,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+@layer utilities {
+  .min-h-calc {
+    min-height: calc(100vh - 90px);
+  }
+}
