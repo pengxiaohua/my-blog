@@ -18,11 +18,10 @@ const Navigation: FC = () => {
           <li className="cursor-pointer" key={nav.key}>
             <Link
               to={nav.route}
-              className={`cursor-pointer ${
-                location.pathname === nav.route
-                  ? "text-sky-500 dark:text-sky-400" // 高亮样式
-                  : "hover:text-sky-500 dark:hover:text-sky-400"
-              }`}
+              className={`cursor-pointer ${location.pathname === nav.route
+                ? "text-sky-500 dark:text-sky-400" // 高亮样式
+                : "hover:text-sky-500 dark:hover:text-sky-400"
+                }`}
             >
               {nav.title}
             </Link>
@@ -50,7 +49,10 @@ const Navigation: FC = () => {
               <li className="cursor-pointer" key={nav.key}>
                 <Link
                   to={nav.route}
-                  className="block hover:text-sky-500 dark:hover:text-sky-400"
+                  className={`cursor-pointer ${location.pathname === nav.route
+                    ? "text-sky-500 dark:text-sky-400" // 高亮样式
+                    : "hover:text-sky-500 dark:hover:text-sky-400"
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {nav.title}

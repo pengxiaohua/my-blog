@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { useNavigate } from "react-router";
+import { IoEyeOutline } from "react-icons/io5";
+
 
 interface IBlog {
   id: number;
   title: string;
   content: string;
-  tags: string;
+  tags: string[];
   author: string;
   readTimes?: number;
   createTime: string;
@@ -39,10 +41,21 @@ const BlogItem: FC<IProps> = (props) => {
       </div>
       <div className="break-all dark:text-white">{blog.content}</div>
       <div className="flex justify-between items-center mt-4">
-        <div className="blog-item__read-times dark:text-white">
-          阅读次数：{blog.readTimes}
+        <div className="blog-item__read-times dark:text-white flex items-center text-sm">
+          <IoEyeOutline /> {blog.readTimes}
         </div>
-        <div className="flex justify-end dark:text-white">{blog.tags}</div>
+        <div className="flex justify-end dark:text-white">
+          {
+            blog.tags.map((tag, index) => (
+              <div
+                key={index}
+                className="text-xs px-2 py-1 bg-slate-900 dark:bg-white text-white dark:text-black rounded-lg mr-2"
+              >
+                {tag}
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
   );
