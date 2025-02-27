@@ -60,7 +60,7 @@ const BlogItem: FC<IProps> = (props) => {
             blog.tags.map((tag, index) => (
               <div
                 key={index}
-                className="text-xs px-2 py-1 bg-slate-900 dark:bg-white text-white dark:text-black rounded-lg mr-2"
+                className="text-xs px-2 py-1 bg-slate-900 dark:bg-white text-white dark:text-black rounded-lg ml-2"
               >
                 {tag}
               </div>

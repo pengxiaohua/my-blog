@@ -72,7 +72,7 @@ const Header: FC = () => {
           xiaohua.run!
         </Link>
         <Navigation />
-        <div className="flex items-center relative">
+        <div className="flex items-center relative gap-2">
           <img
             className="absolute top-[30px]"
             style={{ display: showQcCode ? "block" : "none" }}
@@ -81,7 +81,7 @@ const Header: FC = () => {
           />
           <SwitchMode onChange={toggleDarkMode} initialChecked={isDark} />
           <div
-            className="w-[22px] h-[22px] cursor-pointer ml-[10px] hidden md:block"
+            className="w-[26px] h-[26px] cursor-pointer ml-[10px] hidden md:block"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -90,7 +90,7 @@ const Header: FC = () => {
           <a
             href="https://github.com/pengxiaohua"
             target="__blank"
-            className="w-[20px] h-[20px] ml-[10px] cursor-pointer"
+            className="w-[24px] h-[24px] ml-[10px] cursor-pointer"
           >
             <img src={isDark ? githubDarkIcon : githubLightIcon} alt="github" />
           </a>
