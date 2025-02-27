@@ -42,7 +42,7 @@ const Navigation: FC = () => {
           )}
         </div>
 
-        {/* 纵向导航 */}
+        {/* 移动端-纵向导航 */}
         {isMenuOpen && (
           <ul className="absolute top-[10px] text-center bg-white text-black dark:bg-black dark:text-white custom-shadow right-0 w-[120px] p-4 space-y-4">
             {navList.map((nav) => (
