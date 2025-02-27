@@ -1,6 +1,5 @@
 import { FC } from "react";
 
-import Aside from "../components/Aside";
 import { blogList } from "../mock/blog-list";
 import BlogItem from "../components/BlogItem";
 
@@ -12,7 +11,7 @@ const HomePage: FC = () => {
           <BlogItem blog={blog} key={blog.id} />
         ))}
       </article>
-      <Aside />
+      {/* <Aside /> */}
     </div>
   );
 };

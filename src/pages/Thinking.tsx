@@ -2,7 +2,6 @@ import { FC } from "react";
 
 import { blogList } from "../mock/blog-list";
 import BlogItem from "../components/BlogItem";
-import Aside from "../components/Aside";
 import { BlogType } from "../types/enums";
 
 const Thinking: FC = () => {
@@ -15,7 +14,6 @@ const Thinking: FC = () => {
             <BlogItem blog={blog} key={blog.id} />
           ))}
       </article>
-      <Aside />
     </div>
   );
 };
