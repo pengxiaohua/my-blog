@@ -25,7 +25,7 @@ const Layout: FC<IProps> = (props) => {
         </main>
         {!isAboutMe && !isAdmin && <Aside />}
       </div>
-      <Footer />
+      {!isAdmin && <Footer />}
     </>
   );
 };
